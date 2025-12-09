@@ -1,10 +1,318 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hello World</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nubes Albae Project: AI-Driven Cloud Brightening</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Enhanced Color Palette & Variables --- */
+        :root {
+            --deep-blue: #191970;     /* Primary Heading/Text */
+            --sky-blue: #1e90ff;      /* Bright Accent Color (Links, Titles) */
+            --light-gray: #f0f4f7;    /* Subtle Page Background */
+            --header-bg: #e0eef5;     /* Lighter Blue/Gray for Header */
+            --container-bg: #ffffff;  /* Section Background */
+            --text-color: #333333;
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-gray);
+            color: var(--text-color);
+        }
+
+        /* --- Header Styling with Gradient --- */
+        .header {
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue)); /* Blue Gradient */
+            color: white; /* White text on dark background */
+            padding: 40px 0 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .logo-text {
+            font-size: 3em;
+            font-weight: 700;
+            margin-top: 5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .slogan {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+        .founder {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1em;
+            font-weight: 400;
+        }
+
+        /* --- Main Layout --- */
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .section {
+            background: var(--container-bg);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+        }
+
+        /* --- Heading Styles with Accent Color --- */
+        h2 {
+            color: var(--deep-blue);
+            border-bottom: 3px solid var(--sky-blue);
+            padding-bottom: 15px;
+            margin-top: 0;
+            font-size: 2em;
+            font-weight: 600;
+        }
+        h3 {
+            color: var(--sky-blue);
+            margin-top: 30px;
+            font-weight: 600;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* --- Flowchart/Key Item Styling --- */
+        .flow-item {
+            background-color: var(--header-bg);
+            border-left: 5px solid var(--sky-blue); /* Stronger indicator */
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            color: var(--deep-blue);
+            transition: background-color 0.3s ease;
+        }
+        .flow-item:hover {
+            background-color: #d8e6f0; /* Slight darker background on hover */
+        }
+
+        /* --- Image Gallery and Descriptions --- */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+        .image-card {
+            flex-basis: calc(33% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: box-shadow 0.3s ease;
+        }
+        .image-card:hover {
+            box-shadow: 0 0 15px rgba(30, 144, 255, 0.5); /* Sky blue hover glow */
+        }
+        .image-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 2px solid var(--light-gray);
+        }
+        .caption {
+            font-size: 0.9em;
+            color: var(--text-color);
+            margin-top: 5px;
+            text-align: left;
+            padding-top: 10px;
+            border-top: 1px dashed #eee;
+        }
+        
+        /* --- Technical Code Block Styling --- */
+        .code-block {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', monospace;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            .image-card {
+                flex-basis: 100%;
+            }
+            .logo-text {
+                font-size: 2.2em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is my first GitHub Pages website for Mathematics of Data Science.</p>
+
+    <div class="header">
+        <div style="width: 100px; height: 100px; margin: 0 auto;">
+            <img src="path/to/NubesAlbaeLogo.png" alt="Nubes Albae Logo" style="width:100%; height:auto; filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));">
+        </div>
+        <div class="logo-text">NUBES ALBAE</div>
+        <div class="slogan">“Geoengineering Earth back into Earth”</div>
+        <div class="founder">Founder: Jose Andres Padilla Molina</div>
+    </div>
+
+    <div class="container">
+
+        <div class="section">
+            <h2>The Current Situation: UV Radiation and Atmospheric Heating</h2>
+            <p>The Sun emits a broad spectrum of electromagnetic radiation, including UV rays (UV-C, UV-B, UV-A). The Earth's atmosphere, particularly the stratospheric ozone layer, absorbs most harmful UV radiation.</p>
+            
+            <h3>UV Irradiance is Rising ☀️</h3>
+            <p>Research indicates that UV irradiance at the surface is rising in many places due to factors like ozone depletion, changes in cloud/aerosol cover, and climate-driven shifts. If more UV and solar radiation reach the lower atmosphere/surface, the surface/air can warm more, potentially changing the structure of the troposphere.</p>
+
+            <div class="image-gallery">
+                <div class="image-card">
+                    <img src="path/to/Image_5.png" alt="Conceptual art of the Sun over a dark, rocky landscape.">
+                    <p class="caption">**Solar Radiation and Planetary Surface:** This illustrates solar radiation (from the image of the sun) reaching a planetary surface, representing the potential for **surface/air warming** if more radiation penetrates the atmosphere.</p>
+                </div>
+                <div class="image-card">
+                    <img src="path/to/Image_6.png" alt="An image of Earth from space, showing a large circular cloud formation.">
+                    <p class="caption">**Earth's Atmosphere and Clouds:** A view of Earth's clouds and atmosphere, highlighting the complex structure of the **troposphere** that is influenced by incoming solar radiation.</p>
+                </div>
+                <div class="image-card">
+                    <img src="path/to/Image_7.png" alt="An image of the Earth partially obscured by clouds at night.">
+                    <p class="caption">**Global Heat Distribution:** Represents the planet and its cloud cover, relating to how ozone dynamics and atmospheric circulation influence **surface warming** and heat distribution.</p>
+                </div>
+            </div>
+
+            <h3>Ozone Layer Status (2025)</h3>
+            <ul>
+                <li>The 2025 ozone hole reached $8.83$ million sq miles ($\approx 22.9$ million $\text{km}^2$), confirming variability but overall recovery.</li>
+                <li>Extreme scenarios show that severe ozone depletion cools the planet by up to $3.5$ °C globally (with constant $\text{CO}_2$), demonstrating ozone’s powerful influence on heat distribution.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>The Solution: Marine Cloud Brightening (MCB) 💡</h2>
+            <p>Marine Cloud Brightening (MCB) is a geoengineering technique aiming to **increase the reflectivity (albedo)** of low-lying clouds to reflect more solar radiation back into space, moderating global warming.</p>
+
+            <div class="image-gallery">
+                <div class="image-card" style="flex-basis: 45%;">
+                    <img src="path/to/MCB_Ship_Concept_Image.png" alt="Concept art of a futuristic ship spraying aerosols into marine clouds for cloud brightening.">
+                    <p class="caption">**MCB Deployment Concept:** A visualization of a specialized ship releasing **aerosolized saline solution** to brighten clouds, enabling the $\text{MCB}$ process.</p>
+                </div>
+            </div>
+
+            <h3>MCB Process Flow</h3>
+            <div class="flow-item">**1. Seed Clouds:** Clouds are seeded with tiny sea-salt particles acting as **Cloud Condensation Nuclei (CCN)**.</div>
+            <div class="flow-item">**2. Smaller Droplets:** This creates **more, smaller droplets**, increasing cloud albedo (the Twomey effect).</div>
+            <div class="flow-item">**3. Increased Reflection:** More solar energy (including UV) is reflected back to space.</div>
+            <div class="flow-item">**4. Cooling Effect:** Less solar energy absorbed by Earth's surface leads to a **net cooling effect**.</div>
+            <p>By adjusting cloud reflectivity, we can modulate the Earth’s radiative balance, reducing net energy gain in the climate system.</p>
+        </div>
+
+        <div class="section">
+            <h2>Business Concept: AI-Driven Cloud Brightening 📈</h2>
+            <p>Nubes Albae proposes a company deploying an **AI-driven system** to optimize cloud reflectivity and generate revenue through innovative financial models.</p>
+
+            <h3>Technology & Operations</h3>
+            <div class="flow-item">**AI Observation:** AI system scans sky conditions (clouds, aerosols, wind) via satellites and drones.</div>
+            <div class="flow-item">**Dynamic Deployment:** Fleets of ships/drones release aerosolized saline solution to brighten **target marine stratocumulus clouds**.</div>
+            <div class="flow-item">**Verify Performance:** Measure outcomes (albedo change, temperature reduction) to verify performance for **Albedo Credits**.</div>
+
+            <h3>Revenue & Incentive Model</h3>
+            <ul>
+                <li>**Government Contracts:** Service contracts with governments (especially vulnerable developing countries) for regional temperature reduction.</li>
+                <li>**Shareholder Tax Incentives:** Investors receive tax credits/exemptions for investing in certified climate-adaptation technology.</li>
+                <li>**Albedo Credits:** Generate and sell "albedo credits" representing avoided warming to offset climate risk.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>The AlexNet Model: Cloud Detection with Deep Learning 🧠</h2>
+            <p>The project's "brain" is a compact **AlexNet-style Convolutional Neural Network (CNN)** used to detect visual patterns in the sky and classify pictures as **'cloudy' or 'not cloudy'**. The model uses five convolutional blocks followed by three fully connected layers (1024–512–2).</p>
+
+            <h3>Model Architecture & Code</h3>
+            <div class="image-gallery">
+                <div class="image-card">
+                    <img src="path/to/AlexNet_Diagram.png" alt="Diagram of the AlexNet CNN architecture.">
+                    <p class="caption">**AlexNet Architecture Diagram:** Visual representation of the model structure, showing feature extraction via convolutional layers and classification via the fully connected layers.</p>
+                </div>
+                <div class="image-card">
+                    <div class="code-block" style="text-align: left; height: 350px;">
+<pre>
+class SimpleAlexNet(nn.Module):
+    """A simplified AlexNet suitable for small datasets."""
+    def __init__(self, num_classes=2):
+        super(SimpleAlexNet, self).__init__()
+        self.features = nn.Sequential(
+            nn.Conv2d(3, 64, kernel_size=11, stride=4, padding=2),
+            nn.ReLU(True),
+            nn.MaxPool2d(3, 2),
+            # ... additional conv blocks ...
+        )
+        # Final feature map size = 6x6 with 256 channels
+        self.classifier = nn.Sequential(
+            nn.Dropout(),
+            nn.Linear(256 * 6 * 6, 1024),
+            nn.ReLU(True),
+            # ... additional linear layers ...
+            nn.Linear(512, num_classes),
+        )
+    # ... forward function and build_model ...
+</pre>
+                    </div>
+                    <p class="caption">**PyTorch Implementation Snippet:** The code defining the simplified $\text{AlexNet}$ architecture, ready to be executed in a Python environment like VS Code.</p>
+                </div>
+            </div>
+
+            <h3>Key Experiment Results</h3>
+            <div class="image-gallery">
+                <div class="image-card" style="flex-basis: 45%;">
+                    <img src="path/to/Confusion_Matrix.png" alt="Confusion Matrix showing 44 correct ClearSky and 47 correct Cloudy predictions with 0 false positives or negatives.">
+                    <p class="caption">**Confusion Matrix — Baseline:** Demonstrates the model's high reliability for binary classification, achieving **zero false positives/negatives** in the validation set.</p>
+                </div>
+                <div class="image-card" style="flex-basis: 45%;">
+                    <img src="path/to/Test_Prediction_Grid.png" alt="Grid of 20 test images with prediction and confidence score.">
+                    <p class="caption">**Test Predictions with Confidence %:** Results show the classifier **generalizes very well** to unseen images with high confidence, proving the model learned stable cloud features.</p>
+                </div>
+            </div>
+            <ul>
+                <li>**Ideal Settings:** The ideal performance setting was a learning rate ($\text{lr}$) at **$1\text{e-}4$** for slower, more reliable learning.</li>
+                <li>**Augmentation:** Data augmentation was **not required** due to the clean and consistent nature of the image dataset.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Why This Matters for Humanity 🌍</h2>
+            <p>The urgency of climate change demands innovative solutions. Controlling cloud reflectivity offers a critical lever to reduce net solar input and slow atmospheric heating.</p>
+            <ul>
+                <li>**Mitigate Warming:** Reduces net solar input, slowing surface and tropospheric heating.</li>
+                <li>**Protect Vulnerable Regions:** Offers local solar heating reduction, providing adaptation benefits.</li>
+                <li>**Mobilize Capital:** The financial model aligns private investment with climate service provision.</li>
+            </ul>
+        </div>
+
+    </div>
+
 </body>
 </html>
